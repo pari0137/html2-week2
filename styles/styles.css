@@ -150,3 +150,37 @@ h4{
 /************************************************************
                     Class Styles
 ************************************************************/
+
+/* ONLY TARGET UL INSIDE OF THE NAV */
+nav ul{
+    display: flex;
+
+    /* FLEX-DIRECTION CHANGES THE ORDER OF THE CONTENT - ROW-REVERSE WILL (BY DEFAULT) READ
+    RIGHT TO LEFT, AND COLUMN-REVERSE WILL READ BOTTOM TO TOP
+    flex-direction: column-reverse;*/
+
+    padding: 10px 0; /* TWO VAALUES MEANS TOP-BOTTOM, LEFT-RIGHT */
+    /* JUSTIFY-CONTENT WILL POSITION THE CONTENT ALONG THE MAIN AXIS (BY DEFAULT, ROW) 
+    justify-content: space-evenly;*/
+
+    /*height: 100px;
+     ALIGN-ITEMS WILL POSITION THE CONTENT ALONG THE CROSS AXIS (BY DEFAULT, COLUMN) 
+    align-items: center;*/
+}
+
+nav ul li{
+    background-color: #c3e0fc;
+    /* FLEX-GROW ALLOWS THE CHILDREN TO GROW TO FILL THE AVAILABLE SPACE */
+    flex-grow:1;
+    /* FLEX-BASIS 0 WILL MAKE THE ITEMS IGNORE THE SIZE OF THE CONTENT INSIDE OF THEM */
+    flex-basis: 0;
+}
+
+nav ul li a{
+    display:block;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color:rgb(129, 129, 129);
+}
