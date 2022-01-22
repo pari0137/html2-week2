@@ -184,3 +184,41 @@ nav ul li a{
 nav ul li a:hover{
     background-color:rgb(129, 129, 129);
 }
+
+
+h1{
+    display:grid; 
+    /* SET UP A GRID WITH 5 COLUMNS */
+    grid-template-columns: repeat(5, 1fr); /*1fr 1fr 1fr 1fr 1fr*/
+    /* GRID TEMPLATE AREAS FORMS A MAP OF THE GRID YOU WANT TO USE */
+    grid-template-areas: 
+    "penguin titlea titlea titlea titlea"
+    "penguin titleb titleb titleb titleb";
+}
+h1 img{
+    /* GRID AREA ASSIGNS AN ITEM TO AN AREA IN TEH GRID */
+    grid-area:penguin;
+}
+h1 span:nth-child(2){ grid-area:titlea; }
+h1 span:nth-child(3){ grid-area:titleb; }
+
+#game{
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
+    justify-items:center;
+    align-items:end;
+}
+
+#game img:nth-of-type(3){
+    grid-row:3;
+    background-color: ghostwhite;
+}
+
+#game img:nth-of-type(2){
+    grid-column-start: 2;
+    grid-column-end: span 2;
+    background-color: gray;
+    justify-self: end;
+    align-self: center;
+}
